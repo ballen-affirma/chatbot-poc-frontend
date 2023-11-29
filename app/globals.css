@@ -3,25 +3,129 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --alorica-blue: #003A63;
+  --alorica-orange: #f58025;
+  --alorica-bg: #e5f1fc;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-image: url('site_bg.png');
+  background-size: 100%;
+  background-repeat: no-repeat
+}
+
+
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.svg-icon {
+  width: 2em;
+  height: 2em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: var(--alorica-blue);
+}
+
+.svg-icon circle {
+  stroke: var(--alorica-blue);
+  stroke-width: 1;
+}
+
+/* Loading spinner */
+.lds-dual-ring {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  border: 6px solid var(--alorica-orange);
+  border-color: var(--alorica-orange) transparent var(--alorica-orange) transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom CSS */
+
+.chatbot-window {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--alorica-bg);
+  border-color: var(--alorica-blue);
+  border-radius: 8px;
+  min-width: 400px;
+  max-width: 400px;
+}
+
+.message-history {
+  max-height: 400px;
+  overflow-y: auto;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  margin: 4px;
+}
+
+.message {
+  border-bottom: 1px solid var(--alorica-blue);
+  padding-top: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+  white-space: pre-wrap;
+}
+
+.inputForm {
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.chatInput {
+  flex-grow: 0.9;
+  border-radius: 4px;
+}
+
+.submitButton {
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 4px;
+}
+
+.submitButton:hover {
+  stroke: white;
+  fill: white;
+  background-color: var(--alorica-blue);
+}
+
+.flex-bottom-right {
+  display: flex;
+  justify-content: end;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: end;
 }
