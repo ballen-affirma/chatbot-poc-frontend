@@ -26,7 +26,7 @@ export default function ChatbotWindow() {
         setHistory(h => [...h, {'sender': 'USER', 'text': message, 'key': h.length.toString()}]);
 
         const queryStr = encodeURIComponent(message)
-        fetch(`http://127.0.0.1:5000/predict?msg=${queryStr}`)
+        fetch(`https://webapi-5waicdtr5a-uc.a.run.app/predict?msg=${queryStr}`)
             .then(response => {
                 return response.json()
             })
