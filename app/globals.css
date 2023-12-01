@@ -8,12 +8,6 @@
   --alorica-bg: #e5f1fc;
 }
 
-body {
-  background-image: url('site_bg.png');
-  background-size: 100%;
-  background-repeat: no-repeat
-}
-
 
 /* -----
 SVG Icons - svgicons.sparkk.fr
@@ -58,74 +52,4 @@ SVG Icons - svgicons.sparkk.fr
   100% {
     transform: rotate(360deg);
   }
-}
-
-/* Custom CSS */
-
-.chatbot-window {
-  font-size: 14px;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--alorica-bg);
-  border-color: var(--alorica-blue);
-  border-radius: 8px;
-  min-width: 400px;
-  max-width: 400px;
-}
-
-.message-history {
-  max-height: 400px;
-  overflow-y: auto;
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
-  margin: 4px;
-}
-
-.message {
-  border-bottom: 1px solid var(--alorica-blue);
-  padding-top: 4px;
-  margin-left: 4px;
-  margin-right: 4px;
-  white-space: pre-wrap;
-}
-
-.inputForm {
-  margin-left: 4px;
-  margin-right: 4px;
-  margin-top: 8px;
-  margin-bottom: 4px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.chatInput {
-  flex-grow: 0.9;
-  border-radius: 4px;
-}
-
-.submitButton {
-  padding-left: 4px;
-  padding-right: 4px;
-  border-radius: 4px;
-}
-
-.submitButton:hover {
-  stroke: white;
-  fill: white;
-  background-color: var(--alorica-blue);
-}
-
-.flex-bottom-right {
-  display: flex;
-  justify-content: end;
-  flex-direction: row;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: end;
 }

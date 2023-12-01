@@ -1,0 +1,122 @@
+.chatbotWindow {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid lightgray;
+    background-color: white;
+    border-radius: 8px;
+    min-width: 400px;
+    max-width: 400px;
+}
+
+.header {
+    display: flex;
+    direction: row;
+    border-bottom: 1px solid lightgray;
+    height: 5em;
+}
+
+.introIcon {
+    margin-top: 0.5em;
+    margin-left: 1em;
+    display: block;
+    max-height: 3em;
+    max-width: 3em;
+}
+
+.intro {
+    margin-top: 0.5em;
+    margin-right: 1em;
+    margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+    max-height: 3em;
+}
+
+.emphasized {
+    font-weight: 700;
+    font-size: 14pt;
+}
+  
+.messageHistory {
+    max-height: 70vh;
+    overflow-y: auto;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;;
+}
+
+.message {
+    display: flex;
+    direction: row;
+    min-height: 3em;
+    width: 100%;
+    flex-shrink: 0;
+ }
+
+.chatIcon {
+    margin-top: 0.5em;
+    margin-left: 1em;
+    display: block;
+    max-height: 2em;
+    max-width: 2em;
+}
+
+.messageText {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5em;
+    margin-left: 2em;
+    margin-right: 1em;
+    justify-content: end;
+    flex-grow: 1;
+}
+
+.gray {
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    background-color: lightgray;
+    padding: 0.5em;
+}
+
+.blue {
+    border: 1px solid lightskyblue;
+    border-radius: 4px;
+    background-color: lightskyblue;
+    padding: 0.5em;
+}
+  
+.inputForm {
+    margin-left: 1em;
+    margin-right: 1em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+  
+.chatInput {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    flex-grow: 0.9;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+  
+.submitButton {
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 4px;
+}
+  
+.submitButton:hover {
+    stroke: white;
+    fill: white;
+    background-color: var(--alorica-orange);
+}

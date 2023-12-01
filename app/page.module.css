@@ -1,0 +1,66 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100vh;
+}
+
+.blurbContainer {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 30em;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/blue_bg.jpg");
+    background-size: 100%;
+}
+
+.chatContainer {
+    position: absolute;
+    display: block;
+    float: right;
+    bottom: 4em;
+    right: 4em;
+    box-shadow: 4px 4px 12px black;
+    border-radius: 8px;
+}
+
+.blurbContainer p {
+    font-size: 16pt;
+}
+
+.emphasized {
+    font-weight: 800;
+}
+
+.instructionsContainer {
+    margin-top: 1em;
+    justify-content: start;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.footer {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer a {
+    margin-top: auto;
+    margin-left: 2em;
+    margin-right: 2em;
+    text-decoration: underline;
+}
+
+.footer p {
+    margin-left: 2em;
+    margin-right: 2em;
+}
