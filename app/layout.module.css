@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    background-color: #89BBE5;
+}
+
+.aloricaBanner {
+    height: 4em;
+    display: block;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0.9;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.link {
+    font-size: 16pt;
+}
+
+.link:hover {
+    text-decoration: underline;
+}

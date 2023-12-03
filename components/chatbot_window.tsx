@@ -10,7 +10,13 @@ type SentMessage = {
 };
 
 export default function ChatbotWindow() {
-    const [history, setHistory] = useState<SentMessage[]>([]);
+    const [history, setHistory] = useState<SentMessage[]>([
+        {
+            sender: 'AI',
+            key: '0',
+            text: "I'm here to help! Feel free to ask me any questions about Alorica."
+        }
+    ]);
     const [message, setMessage] = useState('');
     const [isAILoading, setIsAILoading] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null)
@@ -42,11 +48,13 @@ export default function ChatbotWindow() {
     }
 
     useEffect(() => {
-        messagesEndRef?.current?.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-            inline: 'nearest',
-        })
+        if (history.length > 1) {
+            messagesEndRef?.current?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+                inline: 'nearest',
+            })
+        }
     }, [messagesEndRef, history])
 
     const createMessageJSX = (message: SentMessage) => {
@@ -77,7 +85,7 @@ export default function ChatbotWindow() {
                     <img src="/assets/chatbot.webp"></img>
                 </div>
                 <div className={styles.intro}>
-                    <p className={styles.emphasized}>Hi, I'm AVA!</p>
+                    <p className={styles.emphasized}>Hi, I&apos;m AVA!</p>
                     <p>Alorica AI Virtual Assistant</p>
                 </div>
             </div>
