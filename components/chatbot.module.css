@@ -5,8 +5,6 @@
     border: 2px solid lightgray;
     background-color: white;
     border-radius: 8px;
-    min-width: 400px;
-    max-width: 400px;
 }
 
 .header {
@@ -41,7 +39,7 @@
 .messageHistory {
     max-height: 70vh;
     overflow-y: auto;
-    min-height: 70vh;
+    min-height: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;;
@@ -61,6 +59,8 @@
     display: block;
     max-height: 2em;
     max-width: 2em;
+    min-width: 2em;
+    min-height: 2em;
 }
 
 .messageText {
