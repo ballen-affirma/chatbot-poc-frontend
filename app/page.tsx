@@ -16,7 +16,7 @@ export default function Home() {
         <p>Chat with our AI assistant!</p>
         <div className={styles.instructionColumns}>
           <p className={styles.column}>Ask questions about our business offerings and get answers about how Alorica can enhance your business processes.</p>
-          <p className={styles.column}>Find what you're looking for by using AVA to help navigate around alorica.com.</p>
+          <p className={styles.column}>Find what you&apos;re looking for by using AVA to help navigate around alorica.com.</p>
           <p className={styles.column}>Ready to answer your inquiries and respond to your needs, powered by Alorica IQ.</p>
         </div>
       </div>
