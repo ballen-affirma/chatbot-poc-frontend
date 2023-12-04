@@ -21,7 +21,7 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
     .header {
         display: flex;
         flex-direction: column;
@@ -44,6 +44,7 @@
     .links {
         display: flex;
         flex-direction: column;
+        margin-bottom: 1em;
     }
 
     .link {

@@ -9,7 +9,9 @@ export default function Home() {
         <p>The Next Generation</p>
         <p className={styles.emphasized}>Customer Experience</p>
         <br/>
-        <p>Inspired by People, Infused with Technology</p>
+        <div className={styles.mobileColumn}>
+          <p>Inspired by People,</p><p>Infused with Technology</p>
+        </div>
         <p className={styles.emphasized}>Powered by Alorica IQ</p>
       </div>
       <div className={styles.instructionsContainer}>

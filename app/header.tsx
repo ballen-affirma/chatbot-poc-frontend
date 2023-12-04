@@ -1,12 +1,20 @@
 'use client';
 
-import styles from './layout.module.css'
+import styles from './header.module.css'
 import { useEffect, useState } from 'react'
 
 function getCurrentDimension(){
-    return {
-      	width: window.innerWidth,
-      	height: window.innerHeight
+    if (typeof window !== 'undefined') {
+        return {
+            width: window.innerWidth,
+            height: window.innerHeight
+        }
+    }
+    else {
+        return {
+            width: 0,
+            height: 0,
+        }
     }
 }
 
@@ -20,23 +28,25 @@ export default function Header() {
     }
 
     useEffect(() => {
-        const updateDimension = () => {
-            setScreenSize(getCurrentDimension())
-        }
-        window.addEventListener('resize', updateDimension);
+        if (typeof window !== 'undefined') {
+            const updateDimension = () => {
+                setScreenSize(getCurrentDimension())
+            }
+            window.addEventListener('resize', updateDimension);
 
-        if (screenSize.width > 1024) {
-            setShowLinks(true);
-            setShowMenu(false);
+            if (screenSize.width > 1023) {
+                setShowLinks(true);
+                setShowMenu(false);
+            }
+            else {
+                setShowLinks(false);
+                setShowMenu(true);
+            }
+            
+            return(() => {
+                window.removeEventListener('resize', updateDimension);
+            })
         }
-        else {
-            setShowLinks(false);
-            setShowMenu(true);
-        }
-        
-        return(() => {
-            window.removeEventListener('resize', updateDimension);
-        })
     }, [screenSize]);
 
     return (
@@ -51,11 +61,11 @@ export default function Header() {
             </div>
             {showLinks && (
             <div className={styles.links}>
-                <a className={styles.link} href="/">Call Deflection</a>
-                <a className={styles.link} href="/">Contact Optimization</a>
-                <a className={styles.link} href="/">Tools</a>
-                <a className={styles.link} href="/">Alorica Assure</a>
-                <a className={styles.link} href="/">AVA</a>
+                <a className={styles.link} href="https://alorica-chatbot-demo-5waicdtr5a-uc.a.run.app">Call Deflection</a>
+                <a className={styles.link} href="https://alorica-chatbot-demo-5waicdtr5a-uc.a.run.app">Contact Optimization</a>
+                <a className={styles.link} href="https://alorica-chatbot-demo-5waicdtr5a-uc.a.run.app">Tools</a>
+                <a className={styles.link} href="https://alorica-chatbot-demo-5waicdtr5a-uc.a.run.app">Alorica Assure</a>
+                <a className={styles.link} href="https://alorica-chatbot-demo-5waicdtr5a-uc.a.run.app">AVA</a>
             </div>
             )}
         </div>
