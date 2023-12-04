@@ -31,10 +31,10 @@ export default function ChatbotWindow() {
     }
 
     const handleSubmit = async function(event: FormEvent<HTMLFormElement>) {
+        event.preventDefault();
         if (message == "") {
             return;
         }
-        event.preventDefault();
         setHistory(h => [...h, {'sender': 'USER', 'text': message, 'key': h.length.toString()}]);
 
         const queryStr = encodeURIComponent(message)
