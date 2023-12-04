@@ -1,3 +1,17 @@
+@media screen and (min-width: 1024px) {
+    .chatbotWindow {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .chatbotWindow {
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .chatbotWindow {
     font-size: 14px;
     display: flex;
@@ -5,6 +19,14 @@
     border: 2px solid lightgray;
     background-color: white;
     border-radius: 8px;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+   80% { transform: rotate(0deg); }
+   85% { transform: rotate(5deg); }
+   95% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }
 
 .header {
@@ -20,6 +42,12 @@
     display: block;
     max-height: 3em;
     max-width: 3em;
+}
+
+.introIcon:hover {
+    cursor: pointer;
+    background-color: var(--alorica-orange);
+    border-radius: 4px;
 }
 
 .intro {
@@ -119,4 +147,16 @@
     stroke: white;
     fill: white;
     background-color: var(--alorica-orange);
+}
+
+.closedChatIcon {
+    width: 4em;
+    height: 4em;
+    animation: wiggle 2.5s infinite;
+}
+
+.closedChatIcon:hover {
+    cursor: pointer;
+    background-color: var(--alorica-orange);
+    border-radius: 8px;
 }

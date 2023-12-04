@@ -19,7 +19,12 @@ export default function ChatbotWindow() {
     ]);
     const [message, setMessage] = useState('');
     const [isAILoading, setIsAILoading] = useState(false);
+    const [showChat, setShowChat] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null)
+
+    const toggleShowChat = () => {
+        setShowChat(s => !s);
+    }
 
     const handleMessageChange = function (event: ChangeEvent<HTMLInputElement>) {
         setMessage(event.target.value);
@@ -78,11 +83,17 @@ export default function ChatbotWindow() {
         </div>
     }
 
-    return (
+    useEffect(() => {
+        if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+            setShowChat(true);
+        }
+    })
+
+    return showChat ? (
         <div className={styles.chatbotWindow}>
             <div className={styles.header}>
                 <div className={styles.introIcon}>
-                    <img src="/assets/chatbot.webp"></img>
+                    <img src="/assets/chatbot.webp" onClick={toggleShowChat}></img>
                 </div>
                 <div className={styles.intro}>
                     <p className={styles.emphasized}>Hi, I&apos;m AVA!</p>
@@ -105,5 +116,7 @@ export default function ChatbotWindow() {
                 </div>
             </form>
         </div>
+    ) : (
+        <div className={styles.closedChatIcon} onClick={toggleShowChat}><img src="/assets/chatbot.webp" /></div>
     )
 }

@@ -23,11 +23,10 @@
         position: absolute;
         display: block;
         float: right;
-        top: 10vh;
-        right: 4em;
-        box-shadow: 4px 4px 12px black;
-        border-radius: 8px;
-        width: 400px;
+        bottom: 4em;
+        right: 2em;
+        /*box-shadow: 4px 4px 12px black;
+        border-radius: 8px;*/
     }
 
     .instructionColumns {
@@ -60,6 +59,7 @@
         align-items: center;
         justify-content: center;
     }
+
 }
 
 @media screen and (max-width: 1023px) {
