@@ -99,6 +99,7 @@
     margin-right: 1em;
     justify-content: end;
     flex-grow: 1;
+    overflow-wrap: anywhere;
 }
 
 .gray {
